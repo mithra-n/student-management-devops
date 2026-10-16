@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <form method="POST">
+        <input name="name" placeholder="Student Name" required>
+        <input name="department" placeholder="Department" required>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Student List</h2>
+
+    {% for student in students %}
+        <p>{{ student[1] }} - {{ student[2] }}</p>
+    {% else %}
+        <p>No students added yet.</p>
+    {% endfor %}
+</body>
+</html>
